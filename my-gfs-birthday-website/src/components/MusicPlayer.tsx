@@ -66,7 +66,12 @@ export default function MusicPlayer() {
           height="100%"
           config={{
             youtube: {
-              playsinline: 1, // This is the corrected structure
+                // @ts-ignore
+              playerVars: {
+                
+                // @ts-ignore - This tells TypeScript to ignore the next line
+                playsinline: 1,
+              },
             },
           }}
           onReady={handleReady}
