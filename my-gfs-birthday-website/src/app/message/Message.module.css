@@ -1,0 +1,76 @@
+/* src/app/message/Message.module.css */
+.pageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 100px);
+  padding: 2rem;
+  background: linear-gradient(180deg, #fde4e4 0%, var(--background-color) 100%);
+}
+
+.revealContainer {
+  text-align: center;
+}
+
+.revealButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  color: var(--text-color);
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  animation: gentleBob 2s ease-in-out infinite;
+}
+
+.messageCard {
+  background: white;
+  padding: 3rem;
+  border-radius: 20px;
+  max-width: 600px;
+  text-align: center;
+  box-shadow: 0 10px 30px var(--shadow-color);
+  line-height: 1.8;
+  font-size: 1.1rem;
+  animation: fadeInScaleUp 0.8s ease-out forwards;
+}
+
+.messageCard h2 {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+}
+
+.messageCard p {
+  margin-bottom: 1rem;
+}
+
+.signature {
+  margin-top: 2rem;
+  font-weight: 700;
+}
+
+/* Animations */
+@keyframes fadeInScaleUp {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes gentleBob {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}

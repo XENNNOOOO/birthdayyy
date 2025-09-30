@@ -1,0 +1,34 @@
+/* src/components/PhotoCard.module.css */
+
+.card {
+  background-color: white;
+  padding: 1rem;
+  padding-bottom: 2.5rem; /* More space at the bottom for the caption */
+  border-radius: 8px;
+  box-shadow: 0 4px 15px var(--shadow-color);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  position: relative; /* Needed for caption positioning */
+}
+
+.card:hover {
+  transform: scale(1.05) rotate(0deg) !important; /* Override inline style on hover */
+  box-shadow: 0 8px 25px var(--shadow-color);
+  z-index: 10;
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1; /* Make it square */
+}
+
+.caption {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  right: 1rem;
+  text-align: center;
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: var(--text-color);
+}
